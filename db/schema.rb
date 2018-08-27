@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_27_154543) do
+ActiveRecord::Schema.define(version: 2018_08_27_162028) do
+
+  create_table "residents", force: :cascade do |t|
+    t.integer "room_id"
+    t.string "name"
+    t.date "dob"
+    t.text "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_residents_on_room_id"
+  end
 
   create_table "rooms", force: :cascade do |t|
     t.string "name"

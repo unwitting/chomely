@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @resident.name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @resident.dob %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @resident.image_url %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= link_to @resident.room.name, @resident.room %>
+</p>
+
+<%= link_to 'Edit', edit_resident_path(@resident) %> |
+<%= link_to 'Back', residents_path %>
