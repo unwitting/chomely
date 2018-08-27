@@ -16,8 +16,10 @@
 </p>
 
 <p>
-  <strong>Room:</strong>
-  <%= link_to @resident.room.name, @resident.room %>
+  <% if @resident.room %>
+    <strong>Room:</strong>
+    <%= link_to @resident.room.name, @resident.room %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_resident_path(@resident) %> |
