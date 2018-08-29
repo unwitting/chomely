@@ -1,4 +1,6 @@
 <nav class="toolbar">
+  <%= link_to 'Rooms', rooms_path %>
+  <%= link_to 'Residents', residents_path %>
   <% if signed_in? %>
     Signed in as: <%= current_user.email %>
     <%= link_to 'Sign out', sign_out_path, method: :delete %>

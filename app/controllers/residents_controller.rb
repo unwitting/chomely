@@ -72,6 +72,6 @@ class ResidentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resident_params
-      params.require(:resident).permit(:name, :dob, :image_url, :room_id)
+      params.require(:resident).permit(:name, :dob, :room_id)
     end
 end
