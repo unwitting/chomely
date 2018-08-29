@@ -8,7 +8,7 @@ FactoryBot.define do
   end
 
   factory :room do
-    name { "Room" }
+    name { "Roomy" }
   end
 
   factory :user do

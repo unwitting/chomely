@@ -2,5 +2,5 @@
 
 require "rails_helper"
 
-RSpec.describe StaticPagesController, type: :controller do
+RSpec.feature "StaticPages", type: :feature do
 end
