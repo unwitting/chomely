@@ -6,9 +6,9 @@ class Resident < ApplicationRecord
   validate :dob_not_in_future
 
   private
-  def dob_not_in_future
-    if dob >= Date.today
-      errors.add :dob, "must be in the past"
+    def dob_not_in_future
+      if dob >= Date.today
+        errors.add :dob, "must be in the past"
+      end
     end
-  end
 end
