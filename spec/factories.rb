@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
+  factory :resident do
+    room { Room.first || association(:room) }
+    name { "Jane" }
+    dob { 50.years.ago }
+  end
+
   factory :room do
     name { "Room" }
   end
