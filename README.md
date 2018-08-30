@@ -18,7 +18,7 @@ In all honesty I spent a bit more than four hours on this, in no small part beca
 
 ## JSON endpoints
 
-There are a set of JSON endpoints provided by the app alongside the normal web routes: [http://carehomely.herokuapp.com/rooms.json](http://carehomely.herokuapp.com/rooms.json), [http://carehomely.herokuapp.com/residents/1.json](http://carehomely.herokuapp.com/residents/1.json) etc. These make use of the jbuilder syntax for easily building responses.
+There are a set of JSON endpoints provided by the app alongside the normal web routes: [http://carehomely.herokuapp.com/rooms.json](http://carehomely.herokuapp.com/rooms.json), [http://carehomely.herokuapp.com/residents/1.json](http://carehomely.herokuapp.com/residents/1.json) etc (both require a logged-in session just like the main views do). These make use of the jbuilder syntax for easily building responses.
 
 ## Stretch features
 
