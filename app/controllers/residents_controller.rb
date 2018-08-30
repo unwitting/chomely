@@ -59,7 +59,7 @@ class ResidentsController < ApplicationController
   def destroy
     @resident.destroy
     respond_to do |format|
-      format.html { redirect_to residents_url, notice: "Resident was successfully destroyed." }
+      format.html { redirect_to residents_url, notice: "Resident was successfully deleted." }
       format.json { head :no_content }
     end
   end
