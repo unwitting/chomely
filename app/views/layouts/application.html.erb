@@ -11,13 +11,9 @@
 
   <body>
     <%= render 'layouts/toolbar' %>
-
-    <%= yield %>
-
-    <div id="flash">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-      <% end %>
-    </div>
+    <%= render 'layouts/flash' %>
+    <main class="page">
+      <%= yield %>
+    </main>
   </body>
 </html>
