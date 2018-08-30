@@ -2,3 +2,4 @@
 
 json.extract! resident, :id, :name, :dob, :room_id, :bio, :created_at, :updated_at
 json.url resident_url(resident, format: :json)
+json.roomUrl room_url(resident.room, format: :json)
