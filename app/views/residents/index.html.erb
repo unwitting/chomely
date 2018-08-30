@@ -1,33 +1,12 @@
 <% provide(:title, "Residents") %>
-<p id="notice"><%= notice %></p>
+<div class="residents">
+  <h1>Residents</h1>
 
-<h1>Residents</h1>
+  <%= link_to 'Register a new resident', new_resident_path, class: 'button' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Dob</th>
-      <th>Image url</th>
-      <th>Room</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @residents.each do |resident| %>
-      <tr>
-        <td><%= resident.name %></td>
-        <td><%= resident.dob %></td>
-        <td><%= resident.room_id %></td>
-        <td><%= link_to 'Show', resident %></td>
-        <td><%= link_to 'Edit', edit_resident_path(resident) %></td>
-        <td><%= link_to 'Destroy', resident, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <div class="residents-list">
+    <% @residents.each_with_index do |resident, i| %>
+      <%= render 'resident_card', resident: resident, index: i %>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Resident', new_resident_path %>
+  </div>
+</div>

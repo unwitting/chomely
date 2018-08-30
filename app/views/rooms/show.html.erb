@@ -3,12 +3,9 @@
   <%= render 'room_card', room: @room, index: 0 %>
 
   <h2>Current residents</h2>
-  <% @room.residents.each do |resident| %>
-    <tr>
-      <td><%= resident.id %></td>
-      <td><%= resident.name %></td>
-      <td><%= resident.dob %></td>
-      <td><%= link_to 'Show', resident %></td>
-    </tr>
-  <% end %>
+  <div class="residents-list">
+    <% @room.residents.each_with_index do |resident, i| %>
+      <%= render 'residents/resident_card', resident: resident, index: i %>
+    <% end %>
+  </div>
 </div>

@@ -1,0 +1,14 @@
+<div class="resident-card">
+  <div class="info-area">
+    <h3 class="name"><%= link_to resident.name, resident %></h3>
+    <p>Born: <%= resident.dob %></p>
+    <% if resident.room %>
+      <p>Residing in: <%= link_to resident.room.name, resident.room, class: "button small" %></p>
+    <% elsif %>
+      <p>Not currently allocated to a room</p>
+    <% end %>
+  </div>
+  <%= image_tag "https://www.thinkrevivehealth.com/sites/default/files/styles/thumbnail/public/default_images/portrait-placeholder.png?itok=IhJi0rSm", class: "image" %>
+  <%= link_to 'Edit', edit_resident_path(resident), class: "edit" %>
+  <%= link_to 'Delete', resident, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete" %>
+</div>

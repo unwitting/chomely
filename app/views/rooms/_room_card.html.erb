@@ -1,6 +1,15 @@
 <div class="room-card <%= 'cannot-delete' if room.residents.length > 0 %>">
   <div class="info-area">
     <h3 class="name"><%= link_to room.name, room %></h3>
+    <% if room.residents.length > 0 %>
+      <p>
+      <% room.residents.each do |resident| %>
+        <%= link_to resident.name, resident, class: "button small" %>
+      <% end %>
+      </p>
+    <% elsif %>
+      <p>Not currently allocated any residents</p>
+    <% end %>
   </div>
   <%= image_tag "room_#{(index % 2) + 1}.jpg", class: "image" %>
   <%= link_to 'Edit', edit_room_path(room), class: "edit" %>
