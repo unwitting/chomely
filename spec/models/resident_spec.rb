@@ -13,6 +13,15 @@ RSpec.describe Resident, type: :model do
     expect { create(:resident, name: "ThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislongThisislong") }.to raise_error(ActiveRecord::RecordInvalid)
   end
 
+  scenario "accepts valid bio" do
+    expect(create(:resident)).to be_valid
+    expect(create(:resident, bio: "Very short bio, but enough to pass")).to be_valid
+  end
+
+  scenario "rejects invalid bio" do
+    expect { create(:resident, bio: "Too short") }.to raise_error(ActiveRecord::RecordInvalid)
+  end
+
   scenario "accepts valid dob" do
     expect(create(:resident, dob: "1960-06-01")).to be_valid
     expect(create(:resident, dob: 21.years.ago)).to be_valid
