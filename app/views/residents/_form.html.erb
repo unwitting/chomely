@@ -1,7 +1,7 @@
 <%= form_with(model: resident, local: true) do |form| %>
   <% if resident.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(resident.errors.count, "error") %> prohibited this resident from being saved:</h2>
+      <h2><%= pluralize(resident.errors.count, "error") %> stopped this resident from being saved:</h2>
 
       <ul>
       <% resident.errors.full_messages.each do |message| %>
@@ -23,10 +23,11 @@
 
   <div class="field">
     <%= form.label :room_id %>
-    <%= form.number_field :room_id %>
+    <%= form.collection_select :room_id, Room.alphabetical, :id, :name %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'button small' %>
+    <%= link_to "Cancel", resident, class: "button small" %>
   </div>
 <% end %>

@@ -1,7 +1,7 @@
 <%= form_with(model: room, local: true) do |form| %>
   <% if room.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(room.errors.count, "error") %> prohibited this room from being saved:</h2>
+      <h2><%= pluralize(room.errors.count, "error") %> stopped this room from being saved:</h2>
 
       <ul>
       <% room.errors.full_messages.each do |message| %>
@@ -17,7 +17,7 @@
   </div>
 
   <div class="actions">
-    <%= form.submit class: "button small" %>
+    <%= form.submit "Register room", class: "button small" %>
     <%= link_to "Cancel", room, class: "button small" %>
   </div>
 <% end %>
