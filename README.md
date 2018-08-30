@@ -22,3 +22,4 @@ Some things I would've liked to build in for the sake of practise and learning m
 
 1. A further set of models keeping track of an "audit log" of changes to rooms / residents.
 2. Some extra controller methods added to do things like updating a resident's room to a given one, and usage of those from frontend AJAX calls for a more convenient UI.
+3. A mobile-optimised UI. Whilst I would usually approach an app mobile-first, the fact that this is intended as an admin interface coupled with the time constraints meant I took the choice to focus on a desktop layout.
