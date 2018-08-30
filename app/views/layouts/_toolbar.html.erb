@@ -1,10 +1,17 @@
 <nav class="toolbar">
-  <%= link_to 'Rooms', rooms_path %>
-  <%= link_to 'Residents', residents_path %>
-  <% if signed_in? %>
-    Signed in as: <%= current_user.email %>
-    <%= link_to 'Sign out', sign_out_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign in', sign_in_path %>
-  <% end %>
+  <nav class="subtoolbar">
+    <%= link_to 'Rooms', rooms_path, class: 'button' %>
+    <%= link_to 'Residents', residents_path, class: 'button' %>
+  </nav>
+  <nav class="subtoolbar">
+    <%= link_to 'carehomely', root_path, class: 'logo' %>
+  </nav>
+  <nav class="subtoolbar">
+    <% if signed_in? %>
+      <%= current_user.email %>
+      <%= link_to 'Sign out', sign_out_path, method: :delete, class: 'button' %>
+    <% else %>
+      <%= link_to 'Sign in', sign_in_path, class: 'button' %>
+    <% end %>
+  </nav>
 </nav>
