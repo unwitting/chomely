@@ -16,6 +16,10 @@ I looked into integrating React / SCSS modules for the frontend since that's a f
 
 In all honesty I spent a bit more than four hours on this, in no small part because it's the first Ruby or Rails I've written so I was doing a lot of learning along the way! I tried to strike a balance between sticking to the minimal brief and trying to get a good grasp on the platform and its ecosystem.
 
+## JSON endpoints
+
+There are a set of JSON endpoints provided by the app alongside the normal web routes: [http://carehomely.herokuapp.com/rooms.json](http://carehomely.herokuapp.com/rooms.json), [http://carehomely.herokuapp.com/residents/1.json](http://carehomely.herokuapp.com/residents/1.json) etc. These make use of the jbuilder syntax for easily building responses.
+
 ## Stretch features
 
 Some things I would've liked to build in for the sake of practise and learning more about Rails are listed below. I'd be happy to talk about how I might approach these:
@@ -23,3 +27,4 @@ Some things I would've liked to build in for the sake of practise and learning m
 1. A further set of models keeping track of an "audit log" of changes to rooms / residents.
 2. Some extra controller methods added to do things like updating a resident's room to a given one, and usage of those from frontend AJAX calls for a more convenient UI.
 3. A mobile-optimised UI. Whilst I would usually approach an app mobile-first, the fact that this is intended as an admin interface coupled with the time constraints meant I took the choice to focus on a desktop layout.
+4. Separate backend and frontend codebases. Preferably this app would provide a data API only and be consumed by a separate React frontend with its own build pipeline etc.
