@@ -1,35 +1,14 @@
 <% provide(:title, "#{@room.name} | Rooms") %>
-<p id="notice"><%= notice %></p>
+<div class="room">
+  <%= render 'room_card', room: @room, index: 0 %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @room.name %>
-</p>
-
-<p>
-  <strong>Residents:</strong>
-  <table>
-    <thead>
-      <tr>
-        <th>Resident ID</th>
-        <th>Name</th>
-        <th>DOB</th>
-        <th colspan="4"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @room.residents.each do |resident| %>
-        <tr>
-          <td><%= resident.id %></td>
-          <td><%= resident.name %></td>
-          <td><%= resident.dob %></td>
-          <td><%= link_to 'Show', resident %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</p>
-
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+  <h2>Current residents</h2>
+  <% @room.residents.each do |resident| %>
+    <tr>
+      <td><%= resident.id %></td>
+      <td><%= resident.name %></td>
+      <td><%= resident.dob %></td>
+      <td><%= link_to 'Show', resident %></td>
+    </tr>
+  <% end %>
+</div>

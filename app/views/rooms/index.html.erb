@@ -2,13 +2,11 @@
 <div class="rooms">
   <h1>Rooms</h1>
 
+  <%= link_to 'Register a new room', new_room_path, class: 'button' %>
+
   <div class="room-list">
     <% @rooms.each_with_index do |room, i| %>
       <%= render 'room_card', room: room, index: i %>
     <% end %>
   </div>
-
-  <br>
-
-  <%= link_to 'Register a new room', new_room_path, class: 'button' %>
 </div>

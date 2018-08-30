@@ -27,7 +27,7 @@ RSpec.feature "Rooms", type: :feature do
   scenario "get create when logged in" do
     visit new_room_path(as: create(:user))
     expect(current_path).to eql(new_room_path)
-    expect(page).to have_selector("title", text: "Create a new room | carehomely", visible: false)
+    expect(page).to have_selector("title", text: "Register a new room | carehomely", visible: false)
   end
 
   scenario "get edit when logged in" do

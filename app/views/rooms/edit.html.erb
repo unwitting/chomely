@@ -1,7 +1,3 @@
 <% provide(:title, "Edit #{@room.name} | Rooms") %>
-<h1>Editing Room</h1>
-
+<h1>Editing room details: <%= @room.name %></h1>
 <%= render 'form', room: @room %>
-
-<%= link_to 'Show', @room %> |
-<%= link_to 'Back', rooms_path %>
