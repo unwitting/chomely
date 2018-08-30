@@ -21,5 +21,11 @@ h6 {
 
 a {
   color: currentColor;
-  text-decoration: none;
+  &:not(.true-link) {
+    text-decoration: none;
+  }
+}
+
+.emphasise {
+  font-style: italic;
 }
