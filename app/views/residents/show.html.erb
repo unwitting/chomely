@@ -1,4 +1,6 @@
 <% provide(:title, "#{@resident.name} | Residents") %>
 <div class="resident">
   <%= render 'resident_card', resident: @resident, index: 0 %>
+  <h2>Bio</h2>
+  <p><%= @resident.bio %></p>
 </div>

@@ -14,4 +14,12 @@ form {
   label:after {
     content: " ·";
   }
+  textarea {
+    padding: 5px;
+    height: 5rem;
+    width: 500px;
+    max-width: 100%;
+    font: inherit;
+    font-size: 0.9rem;
+  }
 }
