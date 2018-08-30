@@ -5,19 +5,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
-    <%= render 'layouts/toolbar' %>
-
+    <%= react_component('Toolbar', {currentUser: current_user, homePath: root_path, signInPath: sign_in_path, signOutPath: sign_out_path}, {prerender: true}) %>
+    <%= react_component('Flash', {flashes: flash}, {prerender: true}) %>
     <%= yield %>
-
-    <div id="flash">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-      <% end %>
-    </div>
   </body>
 </html>
