@@ -2,10 +2,12 @@
 <div class="room">
   <%= render 'room_card', room: @room, index: 0 %>
 
+  <% if @room.residents.length > 0 %>
   <h2>Current residents</h2>
   <div class="residents-list">
     <% @room.residents.each_with_index do |resident, i| %>
       <%= render 'residents/resident_card', resident: resident, index: i %>
     <% end %>
   </div>
+  <% end %>
 </div>
