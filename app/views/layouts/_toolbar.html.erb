@@ -11,7 +11,8 @@
       <%= current_user.email %>
       <%= link_to 'Sign out', sign_out_path, method: :delete, class: 'button' %>
     <% else %>
-      <%= link_to 'Sign in', sign_in_path, class: 'button' %>
+      <%= link_to 'Admin sign in', sign_in_path, class: 'button' %>
+      <%= link_to 'Create admin user', sign_up_path, class: 'button' %>
     <% end %>
   </nav>
 </nav>

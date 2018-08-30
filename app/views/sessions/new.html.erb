@@ -1,6 +1,6 @@
 <% provide(:title, "Admin sign in") %>
-<div id="clearance" class="sign-in">
-  <h2><%= t(".title") %></h2>
+<div id="clearance" class="page sign-in">
+  <h2><%= yield :title %></h2>
 
   <%= render partial: '/sessions/form' %>
 

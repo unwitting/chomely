@@ -1,0 +1,19 @@
+.button {
+  color: #555;
+  text-decoration: none;
+  padding: 6px 9px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  cursor: pointer;
+  font: inherit;
+  background-color: white;
+  transition: all 0.15s linear;
+  &:hover {
+    color: #222;
+    background-color: #e9f5ff;
+  }
+
+  &.small {
+    font-size: 0.8rem;
+  }
+}

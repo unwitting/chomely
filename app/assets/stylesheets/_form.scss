@@ -1,0 +1,13 @@
+form {
+  div {
+    margin-bottom: 0.5rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 5px 9px;
+    font: inherit;
+    font-size: 0.9rem;
+    margin-left: 0.1rem;
+  }
+}
